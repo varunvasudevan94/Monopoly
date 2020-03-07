@@ -1,5 +1,4 @@
 public class Property extends Tile {
-    private String propertyName;
     private Color color;
 
 
@@ -8,25 +7,15 @@ public class Property extends Tile {
         return (4 * intrinsicValue) /100;
     }
     public Property(String propertyName, Color color, int intrinsicValue){
-        super(TileType.PROPERTY.getValue()); // This is of property type
+        super(TileType.PROPERTY.getValue(), propertyName); // This is of property type
         int rent = computeRent(intrinsicValue);
 
         // Set all the values;
-
-        setPropertyName(propertyName);
         setColor(color);
         setIntrinsicValue(intrinsicValue);
         setRent(rent);
         setOwner(null);
 
-    }
-
-    public String getPropertyName() {
-        return propertyName;
-    }
-
-    public void setPropertyName(String propertyName) {
-        this.propertyName = propertyName;
     }
 
     public Color getColor() {
@@ -48,6 +37,7 @@ public class Property extends Tile {
         return 0;
     }
 
+    @Override
     public void changeOwner(User currentPlayer) {
         if (getOwner() == null) {
             setOwner(currentPlayer);

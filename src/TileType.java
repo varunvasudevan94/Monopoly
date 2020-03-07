@@ -4,6 +4,7 @@ public enum TileType {
     COMMUNITY_CHEST("COMMUNITY_CHEST"),
     CHANCE("CHANCE"),
     PARKING("PARKING"),
+    INCOME_TAX("INCOME_TAX"),
     GO("GO");
 
     private String value;

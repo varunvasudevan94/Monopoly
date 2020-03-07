@@ -1,10 +1,12 @@
 public class User {
     private String username;
     private Coin coin;
+    private int currentPosition; //ranges from 0 - 39 for each tile
 
     public User(String username, Coin coin){
         setUsername(username);
         setCoin(coin);
+        setCurrentPosition(0);
     }
 
     public void setUsername(String username) {
@@ -18,8 +20,6 @@ public class User {
     public void setCurrentPosition(int currentPosition) {
         this.currentPosition = currentPosition;
     }
-
-    private int currentPosition; //ranges from 0 - 39 for each tile
 
     public String getUsername() {
         return username;

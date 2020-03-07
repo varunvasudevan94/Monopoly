@@ -7,17 +7,10 @@ public class Monopoly {
         users[1] = new User("ashis", Coin.BATTLESHIP);
         users[2] = new User("deeksha", Coin.CANON);
         users[3] = new User("aanchal", Coin.IRON);
-
-        Dice [] dices = new Dice[2];
-        dices[0] = new Dice();
-        dices[1] = new Dice();
-
-        dices[0].rollDice();
-        dices[1].rollDice();
-
-        Property oldKentRoad = new Property("Old Kent Road", Color.BROWN, 60);
-        oldKentRoad.changeOwner(users[0]);
-        System.out.println(oldKentRoad.rentToBePaid(users[0]));
+        Board board = new Board(users);
+        board.playMove();
+        board.playMove();
+        board.playMove();
 
     }
 }
