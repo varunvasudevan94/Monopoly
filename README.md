@@ -7,3 +7,6 @@ Pending Things -
 3. Implement Go to Jail
 4. Add Functionality for Bank
 5. UI
+6. Improve the driver
+7. Add number of rounds limit (finish the game after 10 rounds)
+8. unit tests
